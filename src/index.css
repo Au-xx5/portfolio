@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+@keyframes dance {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-2deg) scale(1.05);
+  }
+  50% {
+    transform: rotate(2deg) scale(1);
+  }
+  75% {
+    transform: rotate(-1deg) scale(0.98);
+  }
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+}
+
+
+
+
+.logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+}
+
+.animate-wiggle {
+  animation: dance 1.5s ease-in-out infinite;
+}
+
+.blinking-cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+.terminal-output {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
