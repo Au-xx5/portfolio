@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import NavBar from "./components/NavBar";
 import Profile from "./components/Profile";
 import AboutMe from "./components/AboutMe";
@@ -8,9 +7,9 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import BackToTop from "./components/icons/BackToTop";
 
 Aos.init();
-
 
 function App() {
   return (
@@ -22,6 +21,7 @@ function App() {
         <Skills />
         <Projects />
         <SocialIcons />
+        <BackToTop />
       </div>
       <ParticlesComponent />
     </>

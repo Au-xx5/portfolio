@@ -5,19 +5,31 @@ const Home = () => {
     <>
       <div className="flex justify-center min-h-screen">
         <div className="w-3xl flex flex-col items-center h-full gap-15 py-20">
-          <div
-            className="flex flex-col items-center justify-center gap-3"
-            data-aos="fade-up"
-            data-aos-duration="1500"
-          >
-            <p className="text-xl md:text-3xl">Hi, I'm</p>
-            <p className="text-3xl md:text-6xl font-semibold">Baruch Isemin</p>
-            <p className="hero-text text-center text-gray-500 md:text-3xl font-semibold">
+          <div className="flex flex-col items-center justify-center gap-3">
+            <p
+              className="text-xl md:text-3xl"
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+            >
+              Hi, I'm
+            </p>
+            <p
+              className="text-3xl md:text-6xl font-semibold"
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+            >
+              Baruch Isemin
+            </p>
+            <p
+              className="hero-text text-center text-gray-500 md:text-3xl font-semibold"
+              data-aos="fade-up"
+              data-aos-duration="1500"
+            >
               FullStack Developer
             </p>
           </div>
 
-          <div data-aos="fade-up" data-aos-duration="1500">
+          <div data-aos="zoom-in" data-aos-duration="2500">
             {/* <button className="btn "> */}
             <a
               href="/resume/baruch-resume.pdf"
