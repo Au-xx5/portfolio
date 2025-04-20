@@ -68,7 +68,7 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn text-sm md:text-md text-center  text-black border-2 rounded-3xl py-1 px-3 hover:text-white hover:bg-black hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="btn text-sm md:text-md text-center text-gray-800 border-2 rounded-3xl py-1 px-3 hover:text-white hover:bg-black hover:scale-110 transition-transform duration-300 ease-in-out"
                 >
                   Github
                 </a>

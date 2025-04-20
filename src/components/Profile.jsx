@@ -15,7 +15,9 @@ const Home = () => {
 
           <div>
             <button className="btn text-black border-2 rounded-3xl p-3 hover:text-white hover:bg-black transition-all duration-500 ease-in-out hover:scale-110  hover:skew-x-3 animate-wiggle">
-              Download Resume →
+              <a href="/resume/baruch-resume.pdf" download="Baruch_Resume">
+                Download Resume →
+              </a>
             </button>
           </div>
         </div>
