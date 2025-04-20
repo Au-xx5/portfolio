@@ -1,8 +1,8 @@
 import React from "react";
-import xclone from "../../public/projectImg/xclone.png";
-import taskmanager from "../../public/projectImg/taskmanager.png";
-import weatherapp from "../../public/projectImg/weatherapp.png";
-import memorycard from "../../public/projectImg/memorycard.png";
+import xclone from "/projectImg/xclone.png";
+import taskmanager from "/projectImg/taskmanager.png";
+import weatherapp from "/projectImg/weatherapp.png";
+import memorycard from "/projectImg/memorycard.png";
 
 const Projects = () => {
   const projects = [

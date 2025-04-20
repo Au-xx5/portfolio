@@ -1,12 +1,12 @@
 import React from "react";
-import html from "../../public/skills/html.png";
-import css from "../../public/skills/css.png";
-import javascript from "../../public/skills/javascript.png";
-import tailwindcss from "../../public/skills/tailwindcss.png";
-import bootstrap from "../../public/skills/bootstrap.png";
-import react from "../../public/skills/react.png";
-import nodejs from "../../public/skills/nodejs.png";
-import expressjs from "../../public/skills/expressjs.png";
+import html from "/skills/html.png";
+import css from "/skills/css.png";
+import javascript from "/skills/javascript.png";
+import tailwindcss from "/skills/tailwindcss.png";
+import bootstrap from "/skills/bootstrap.png";
+import react from "/skills/react.png";
+import nodejs from "/skills/nodejs.png";
+import expressjs from "/skills/expressjs.png";
 
 const Skills = () => {
   const skills = [
