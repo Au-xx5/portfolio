@@ -54,7 +54,11 @@ const Skills = () => {
   return (
     <>
       <div className="flex flex-col gap-6 min-h-screen pt-30" id="skills">
-        <div className="flex flex-col items-center">
+        <div
+          className="flex flex-col items-center"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           <h1 className="text-2xl md:text-3xl font-semibold relative group inline-block mb-3">
             My Skills
             <span className="absolute left-0 -bottom-1 h-1 bg-gray-700 rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
@@ -65,7 +69,11 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           {skills.map((skill, index) => (
             <div
               key={index}

@@ -1,6 +1,5 @@
 import React from "react";
 import TerminalSection from "./terminal/Terminal";
-
 const AboutMe = () => {
   return (
     <>
@@ -8,7 +7,11 @@ const AboutMe = () => {
         className="block min-w-[300px] min-h-screen md:w-auto md:flex bg-neutral items-center justify-around pt-24 md:pt-15"
         id="about"
       >
-        <div className="hidden lg:block">
+        <div
+          className="hidden lg:block"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           <img
             src="/avatar/illustration-guy-with-laptop.jpg"
             alt="avatar"
@@ -16,7 +19,11 @@ const AboutMe = () => {
           />
         </div>
 
-        <div className="flex justify-center items-center h-fit">
+        <div
+          className="flex justify-center items-center h-fit"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <div className="flex flex-col min-w-[300px] md:min-w-[600px] items-center justify-center gap-10 md:gap-5">
             <div className="flex flex-col items-center justify-center md:w-fit">
               <p className="text-gray-400 text-xs md:text-sm font-semibold">

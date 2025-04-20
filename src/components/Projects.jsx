@@ -35,7 +35,11 @@ const Projects = () => {
   return (
     <>
       <div className="flex flex-col gap-6 min-h-screen pt-30" id="projects">
-        <div className="flex flex-col items-center">
+        <div
+          className="flex flex-col items-center"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           <p className="text-gray-400 text-xs md:text-sm font-semibold">
             Browse my recent
           </p>
@@ -45,7 +49,11 @@ const Projects = () => {
           </h1>
         </div>
 
-        <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          data-aos="fade-up"
+          data-aos-duration="1500"
+        >
           {projects.map((project, index) => (
             <div
               key={index}
