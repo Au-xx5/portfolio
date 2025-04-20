@@ -3,7 +3,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 const ParticlesComponent = (props) => {
-  const particleCount = 150;
+  const particleCount = 300;
   const [init, setInit] = useState(false);
 
   useEffect(() => {
