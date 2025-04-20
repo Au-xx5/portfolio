@@ -55,11 +55,11 @@ const Projects = () => {
                 <img
                   src={project.img}
                   alt={`${project.name} Icon`}
-                  className="w-70 h-60 rounded-md"
+                  className="w-70 h-60 rounded-3xl transition-transform duration-300 hover:scale-110"
                 />
               </div>
 
-              <h3 className="text-black text-xl font-semibold">
+              <h3 className="text-black text-xl font-semibold hover:text-gray-500">
                 {project.name}
               </h3>
 
