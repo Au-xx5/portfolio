@@ -8,6 +8,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import BackToTop from "./components/icons/BackToTop";
 import ContactMe from "./components/ContactMe";
+import Footer from "./components/Footer";
 
 Aos.init();
 
@@ -21,6 +22,7 @@ function App() {
         <Skills />
         <Projects />
         <ContactMe />
+        <Footer />
         <BackToTop />
       </div>
       <ParticlesComponent />

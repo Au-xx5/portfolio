@@ -77,17 +77,13 @@ export default function ContactSection() {
                 {/* front layer */}
                 <div className="relative w-full h-full bg-gray-200 rounded-2xl p-6 flex items-center gap-4">
                   <div className="text-black">{icon}</div>
-                  <span className="text-black text-xs lg:text-md">
+                  <span className="text-white text-xs lg:text-md dark:text-black">
                     {label}
                   </span>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="text-center my-14 text-gray-400 dark:text-gray-200 text-sm">
-          <p>© {new Date().getFullYear()} Baruch. All rights reserved.</p>
         </div>
       </div>
     </>
