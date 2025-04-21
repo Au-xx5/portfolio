@@ -10,7 +10,7 @@ import BackToTop from "./components/icons/BackToTop";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 import DarkMode from "./components/icons/DarkMode";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 Aos.init();
 
@@ -19,12 +19,26 @@ function App() {
     document.documentElement.classList.contains("dark")
   );
 
+  useEffect(() => {
+    const currentTheme = localStorage.getItem("theme");
+
+    if (currentTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
   const toggleDarkMode = (e) => {
     e.preventDefault();
     const html = document.documentElement;
 
     html.classList.toggle("dark");
     setDarkMode(document.documentElement.classList.contains("dark"));
+
+    if (document.documentElement.classList.contains("dark")) {
+      localStorage.setItem("theme", "dark");
+    } else {
+      localStorage.removeItem("theme");
+    }
   };
 
   return (
