@@ -92,7 +92,7 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn text-xs md:text-md text-center flex items-center justify-center gap-1 text-gray-800 border-2 rounded-3xl py-1 px-3 hover:text-white hover:bg-black hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="btn text-xs md:text-md text-center flex items-center justify-center gap-1 text-gray-800 border-2 rounded-3xl py-1 px-3 active:bg-black active:text-white active:scale-110 lg:hover:text-white lg:hover:bg-black lg:hover:scale-110 transition-transform duration-300 ease-in-out"
                 >
                   <BsGithub /> Github
                 </a>
@@ -101,7 +101,7 @@ const Projects = () => {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn text-black text-xs md:text-md text-center flex items-center justify-center gap-1 border-2 rounded-3xl py-1 px-3 hover:text-white hover:bg-black hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="btn text-black text-xs md:text-md text-center flex items-center justify-center gap-1 border-2 rounded-3xl py-1 px-3 active:bg-black active:text-white active:scale-110 lg:hover:text-white lg:hover:bg-black lg:hover:scale-110 transition-transform duration-300 ease-in-out"
                 >
                   <LuSquareArrowOutUpRight />
                   Demo

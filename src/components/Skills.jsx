@@ -77,10 +77,10 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-5 rounded-2xl bg-white/70 shadow-md border border-white/30 transition-transform duration-300 ease-out hover:-translate-y-2 hover:shadow-xl hover:border-gray-400"
+              className="flex flex-col items-center p-5 rounded-2xl bg-white/70 shadow-md border border-white/30 transition-transform duration-300 ease-out active:hover:-translate-y-2 active:hover:shadow-xl active:hover:border-gray-400 lg:hover:-translate-y-2 lg:hover:shadow-xl lg:hover:border-gray-400"
             >
               {/* Skill icon */}
-              <div className="mb-4 p-3 bg-white rounded-xl shadow transition-transform duration-300 hover:scale-110">
+              <div className="mb-4 p-3 bg-white rounded-xl shadow transition-transform duration-300 active:hover:scale-110 lg:hover:scale-110">
                 <img
                   src={skill.img}
                   alt={`${skill.name} Icon`}

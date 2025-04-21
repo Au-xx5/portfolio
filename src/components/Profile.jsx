@@ -30,15 +30,13 @@ const Home = () => {
           </div>
 
           <div data-aos="zoom-in" data-aos-duration="2500">
-            {/* <button className="btn "> */}
             <a
               href="/resume/baruch-resume.pdf"
               download="Baruch_Resume"
-              className="inline-block text-black border-2 rounded-3xl p-3 hover:text-white hover:bg-black transition-all duration-500 ease-in-out hover:scale-110  hover:skew-x-3 animate-wiggle"
+              className="inline-block text-black border-2 rounded-3xl p-3 active:bg-black active:text-white active:scale-110 active:skew-x-3 lg:hover:text-white lg:hover:bg-black transition-all duration-500 ease-in-out lg:hover:scale-110  lg:hover:skew-x-3 animate-wiggle"
             >
               Download Resume →
             </a>
-            {/* </button> */}
           </div>
         </div>
       </div>
