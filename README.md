@@ -1,12 +1,30 @@
-# React + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! 🚀 This project showcases my skills, projects, and experience as a Full-Stack Developer.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Responsive Design**: Built with Tailwind CSS for a seamless experience across devices.
+- **Interactive Animations**: Powered by AOS and Particles.js for a modern touch.
+- **Projects Showcase**: Explore my recent work with live demos and GitHub links.
+- **Skills Section**: Highlighting the technologies I excel in.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React, Tailwind CSS, AOS
+- **Backend**: Node.js, Express.js
+- **Build Tool**: Vite
+
+## Quick Start
+
+1. Clone the repo: `git clone https://github.com/poloexe/my-portfolio`
+2. Install dependencies: `npm install`
+3. Start the dev server: `npm run dev`
+
+## Live Demo
+
+Check out the live version [here](https://baruch-zytee.vercel.app/).
+
+---
+
+Built with ❤️ by Baruch Isemin.
