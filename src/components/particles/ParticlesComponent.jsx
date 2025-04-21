@@ -3,8 +3,9 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 const ParticlesComponent = (props) => {
-  const particleCount = 200;
+  const particleCount = 250;
   const [init, setInit] = useState(false);
+  const darkMode = props.isDarkMode;
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -13,7 +14,6 @@ const ParticlesComponent = (props) => {
       setInit(true);
     });
   }, []);
-
   const particlesLoaded = (container) => {
     console.log(container);
   };
@@ -46,10 +46,10 @@ const ParticlesComponent = (props) => {
       },
       particles: {
         color: {
-          value: "#FFFFFF",
+          value: darkMode ? "#181a1b" : "#FFFFFF",
         },
         links: {
-          color: "#000000",
+          color: darkMode ? "#FFFFFF" : "#181a1b",
           distance: 150,
           enable: true,
           opacity: 0.3,
@@ -83,7 +83,7 @@ const ParticlesComponent = (props) => {
       },
       detectRetina: true,
     }),
-    [particleCount]
+    [darkMode]
   );
 
   return (

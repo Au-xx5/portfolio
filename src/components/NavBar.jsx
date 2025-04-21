@@ -24,7 +24,9 @@ const NavBar = () => {
   return (
     <div
       className={`sticky top-0 z-10 flex h-20 items-center justify-between px-6 md:px-20 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-md bg-white/5 dark:backdrop-blur-sm shadow-md" : "bg-transparent"
+        scrolled
+          ? "backdrop-blur-md bg-white/5 dark:backdrop-blur-sm shadow-md"
+          : "bg-transparent"
       }`}
     >
       <p className="text-xl text-black dark:text-white logo">Baruch</p>
@@ -35,7 +37,7 @@ const NavBar = () => {
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
           viewBox="0 0 24 24"
-          className="w-8 h-8 text-black"
+          className="w-8 h-8 text-black dark:text-white"
         >
           <path
             fillRule="evenodd"
@@ -71,17 +73,17 @@ const NavBar = () => {
             leaveFrom="opacity-100 translate-y-0 scale-100"
             leaveTo="opacity-0 translate-y-[-20px] scale-95"
           >
-            <DialogPanel className="relative w-full max-w-sm rounded-lg bg-white p-6 pt-10 shadow-xl">
+            <DialogPanel className="relative w-full max-w-sm rounded-lg bg-white dark:bg-[#181a1b] p-6 pt-10 shadow-xl">
               {/* Close button */}
               <button
                 onClick={() => setOpen(false)}
                 className="absolute top-4 right-4 text-gray-500 hover:text-black"
               >
-                <XMarkIcon className="w-6 h-6" />
+                <XMarkIcon className="w-6 h-6 dark:text-white" />
               </button>
 
               {/* Title */}
-              <DialogTitle className="text-center text-2xl font-bold text-black logo">
+              <DialogTitle className="text-center text-2xl font-bold text-black dark:text-white logo">
                 Baruch
               </DialogTitle>
 
@@ -92,7 +94,7 @@ const NavBar = () => {
                     key={item}
                     href={`#${item.toLowerCase()}`}
                     onClick={() => setOpen(false)}
-                    className="w-full text-center dark:hover:text-[#b2aba1] px-4 py-2 rounded-md transition active:bg-gray-100 active:scale-95"
+                    className="w-full text-center dark:text-gray-200 dark:hover:text-gray-400 px-4 py-2 rounded-md transition active:bg-gray-100 dark:active:bg-[#232425] active:scale-95"
                   >
                     {item}
                   </a>

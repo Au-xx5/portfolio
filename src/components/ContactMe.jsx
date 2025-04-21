@@ -11,7 +11,7 @@ export default function ContactSection() {
   return (
     <>
       <div className="pt-24 md:pt-32 px-8 min-h-screen" id="contact">
-        <div className="max-w-4xl mx-auto text-white">
+        <div className="max-w-4xl mx-auto text-white text-center lg:text-left">
           <h2
             className="text-black dark:text-white text-2xl md:text-3xl font-bold relative group inline-block"
             data-aos="fade-up"
@@ -31,7 +31,7 @@ export default function ContactSection() {
           </p>
 
           <div
-            className="flex gap-4 mt-4"
+            className="flex items-center justify-center lg:justify-start gap-4 mt-4"
             data-aos="fade-up"
             data-aos-duration="1500"
           >
@@ -73,11 +73,11 @@ export default function ContactSection() {
             ].map(({ icon, label }, i) => (
               <div key={i} className="relative w-full h-40">
                 {/* back layer */}
-                <div className="absolute top-3 left-3 w-full h-full bg-gray-300 rounded-2xl"></div>
+                <div className="absolute top-3 left-3 w-full h-full bg-gray-400 dark:bg-[#4c4d4f] rounded-2xl"></div>
                 {/* front layer */}
-                <div className="relative w-full h-full bg-gray-200 rounded-2xl p-6 flex items-center gap-4">
-                  <div className="text-black">{icon}</div>
-                  <span className="text-white text-xs lg:text-md dark:text-black">
+                <div className="relative w-full h-full bg-gray-300 dark:bg-[#232425] rounded-2xl p-6 flex items-center gap-4">
+                  <div className="text-black dark:text-white">{icon}</div>
+                  <span className="text-black  dark:text-white text-xs lg:text-md ">
                     {label}
                   </span>
                 </div>

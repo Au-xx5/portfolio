@@ -1,0 +1,20 @@
+import React from "react";
+import { MdDarkMode } from "react-icons/md";
+
+const DarkMode = ({toggleDarkMode}) => {
+  return (
+    <>
+      <div className="fixed flex justify-center items-center bottom-24 right-8 z-50 w-12 h-12">
+        <a
+          href=""
+          className="w-full h-full rounded-full dark:text-white bg-white/80 dark:bg-[#181a1b] shadow-lg active:bg-gray-100 dark:active:bg-[#232425] active:scale-95 lg:hover:bg-gray-500 lg:hover:text-white dark:lg:hover:bg-[#232425] transition-all duration-300 flex justify-center items-center"
+          onClick={toggleDarkMode}
+        >
+          <MdDarkMode size="24" />
+        </a>
+      </div>
+    </>
+  );
+};
+
+export default DarkMode;

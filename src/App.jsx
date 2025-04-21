@@ -9,10 +9,24 @@ import "aos/dist/aos.css";
 import BackToTop from "./components/icons/BackToTop";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
+import DarkMode from "./components/icons/DarkMode";
+import { useState } from "react";
 
 Aos.init();
 
 function App() {
+  const [isDarkMode, setDarkMode] = useState(
+    document.documentElement.classList.contains("dark")
+  );
+
+  const toggleDarkMode = (e) => {
+    e.preventDefault();
+    const html = document.documentElement;
+
+    html.classList.toggle("dark");
+    setDarkMode(document.documentElement.classList.contains("dark"));
+  };
+
   return (
     <>
       <div style={{ position: "relative", zIndex: 1 }}>
@@ -24,8 +38,9 @@ function App() {
         <ContactMe />
         <Footer />
         <BackToTop />
+        <DarkMode toggleDarkMode={toggleDarkMode} />
       </div>
-      <ParticlesComponent />
+      <ParticlesComponent isDarkMode={isDarkMode} />
     </>
   );
 }
