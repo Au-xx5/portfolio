@@ -1,158 +1,108 @@
 import React, { useState, useEffect } from "react";
-
 import {
   Dialog,
-  DialogBackdrop,
   DialogPanel,
   DialogTitle,
+  DialogBackdrop,
   TransitionChild,
 } from "@headlessui/react";
-
 import { XMarkIcon } from "@heroicons/react/24/outline";
 
 const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
-  // Check scroll position and update state
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        // Adjust this value to where you want the effect to trigger
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
-    // Listen to scroll events
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup listener
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div
-      className={`flex items-center justify-between md:px-20 h-20 z-10 sticky top-0 transition-all duration-300 shadow-lg 
-      ${
-        scrolled
-          ? "bg-transparent backdrop-blur-md"
-          : "bg-transparent backdrop-blur-md"
-      }
-      `}
+    <header
+      className={`sticky top-0 z-10 flex h-20 items-center justify-between px-6 md:px-20 transition-all duration-300 ${
+        scrolled ? "backdrop-blur-md bg-white/30 shadow-md" : "bg-transparent"
+      }`}
     >
-      <p className="logo text-black mx-10 md:0">Baruch</p>
+      <p className="text-xl text-black logo">Baruch</p>
 
-      <span className="md:hidden mx-10">
+      {/* Hamburger icon - Mobile only */}
+      <button className="md:hidden" onClick={() => setOpen(true)}>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
           fill="currentColor"
-          className="size-8"
-          onClick={() => {
-            setOpen(true);
-          }}
+          viewBox="0 0 24 24"
+          className="w-8 h-8 text-black"
         >
           <path
             fillRule="evenodd"
-            d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
             clipRule="evenodd"
+            d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
           />
         </svg>
-      </span>
+      </button>
 
-      <Dialog open={open} onClose={setOpen} className="relative z-10">
-        <DialogBackdrop
-          transition
-          className="fixed inset-0 bg-gray-500/75 transition-opacity duration-500 ease-in-out data-closed:opacity-0"
-        />
+      {/* Desktop nav */}
+      <nav className="hidden md:flex gap-8 text-lg font-medium text-black">
+        {["About", "Skills", "Projects", "Contact"].map((item) => (
+          <a
+            key={item}
+            href={`#${item.toLowerCase()}`}
+            className="hover:text-gray-600 transition hover:scale-105"
+          >
+            {item}
+          </a>
+        ))}
+      </nav>
 
-        <div className="fixed inset-0 overflow-hidden">
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="pointer-events-none fixed inset-y-0 right-0 flex max-w-full pl-10">
-              <DialogPanel
-                transition
-                className=" pointer-events-auto relative w-[15rem] max-w-md transform transition duration-500 ease-in-out data-closed:translate-x-full sm:duration-700"
+      {/* Mobile Dialog */}
+      <Dialog open={open} onClose={setOpen} className="relative z-20">
+        <DialogBackdrop className="fixed inset-0 bg-black/30" />
+
+        <div className="fixed inset-0 flex items-start justify-center p-4">
+          <TransitionChild
+            enter="transition ease-out duration-300"
+            enterFrom="opacity-0 translate-y-[-20px] scale-95"
+            enterTo="opacity-100 translate-y-0 scale-100"
+            leave="transition ease-in duration-200"
+            leaveFrom="opacity-100 translate-y-0 scale-100"
+            leaveTo="opacity-0 translate-y-[-20px] scale-95"
+          >
+            <DialogPanel className="relative w-full max-w-sm rounded-lg bg-white p-6 pt-10 shadow-xl">
+              {/* Close button */}
+              <button
+                onClick={() => setOpen(false)}
+                className="absolute top-4 right-4 text-gray-500 hover:text-black"
               >
-                <TransitionChild>
-                  <div className="absolute top-0 left-0 -ml-8 flex pt-4 pr-2 duration-500 ease-in-out data-closed:opacity-0 sm:-ml-10 sm:pr-4">
-                    <button
-                      type="button"
-                      onClick={() => setOpen(false)}
-                      className="relative rounded-md text-gray-300 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden"
-                    >
-                      <span className="absolute -inset-2.5" />
-                      <span className="sr-only">Close panel</span>
-                    </button>
-                  </div>
-                </TransitionChild>
-                <div className="flex h-full flex-col overflow-y-scroll bg-white py-6 shadow-xl">
-                  <div className="px-4 sm:px-6">
-                    <DialogTitle className="text-base font-bold text-gray-900 ">
-                      <XMarkIcon
-                        aria-hidden="true"
-                        className="size-6"
-                        onClick={() => setOpen(false)}
-                      />
-                    </DialogTitle>
-                  </div>
-                  <div className="relative mt-6 flex-1 px-4 sm:px-6">
-                    <nav className="flex flex-col gap-6 text-lg font-medium">
-                      <a href="#about" className="text-black">
-                        About
-                      </a>
+                <XMarkIcon className="w-6 h-6" />
+              </button>
 
-                      <a href="#skills" className="text-black">
-                        Skills
-                      </a>
+              {/* Title */}
+              <DialogTitle className="text-center text-2xl font-bold text-black logo">
+                Baruch
+              </DialogTitle>
 
-                      <a href="#projects" className="text-black">
-                        Projects
-                      </a>
-
-                      <a href="#contact" className="text-black">
-                        Contact Me
-                      </a>
-                    </nav>
-                  </div>
-                </div>
-              </DialogPanel>
-            </div>
-          </div>
+              {/* Nav Links */}
+              <nav className="mt-6 flex flex-col items-center gap-4 text-lg text-black">
+                {["About", "Skills", "Projects", "Contact"].map((item) => (
+                  <a
+                    key={item}
+                    href={`#${item.toLowerCase()}`}
+                    onClick={() => setOpen(false)}
+                    className="w-full text-center px-4 py-2 rounded-md transition active:bg-gray-100 active:scale-95"
+                  >
+                    {item}
+                  </a>
+                ))}
+              </nav>
+            </DialogPanel>
+          </TransitionChild>
         </div>
       </Dialog>
-
-      <nav className="hidden md:flex gap-6 text-lg font-medium">
-        <a
-          href="#about"
-          className="text-black hover:text-gray-600 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(128,128,128,0.8)]"
-        >
-          About
-        </a>
-
-        <a
-          href="#skills"
-          className="text-black hover:text-gray-600 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(128,128,128,0.8)]"
-        >
-          Skills
-        </a>
-
-        <a
-          href="#projects"
-          className="text-black hover:text-gray-600 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(128,128,128,0.8)]"
-        >
-          Projects
-        </a>
-
-        <a
-          href="#contact"
-          className="text-black hover:text-gray-600 transition duration-300 hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(128,128,128,0.8)]"
-        >
-          Contact Me
-        </a>
-      </nav>
-    </div>
+    </header>
   );
 };
 
