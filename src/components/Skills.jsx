@@ -53,18 +53,21 @@ const Skills = () => {
   ];
   return (
     <>
-      <div className="flex flex-col gap-6 min-h-screen pt-30 px-10 lg:px-8" id="skills">
+      <div
+        className="flex flex-col gap-6 min-h-screen pt-30 px-10 lg:px-8"
+        id="skills"
+      >
         <div
           className="flex flex-col items-center"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <h1 className="text-2xl md:text-3xl font-semibold relative group inline-block mb-3">
+          <h1 className="text-2xl dark:text-white md:text-3xl font-semibold relative group inline-block mb-3">
             My Skills
-            <span className="absolute left-0 -bottom-1 h-1 bg-gray-700 rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+            <span className="absolute left-0 -bottom-1 h-1 bg-gray-700 dark:bg-white rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
           </h1>
 
-          <p className="text-gray-400 text-center text-xs md:text-sm font-semibold">
+          <p className="text-gray-400 dark:text-[#b2aba1] text-center text-xs md:text-sm font-semibold">
             Technologies I have mastered through experience
           </p>
         </div>
@@ -77,10 +80,10 @@ const Skills = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-5 rounded-2xl bg-white/70 shadow-md border border-white/30 transition-transform duration-300 ease-out active:hover:-translate-y-2 active:hover:shadow-xl active:hover:border-gray-400 lg:hover:-translate-y-2 lg:hover:shadow-xl lg:hover:border-gray-400"
+              className="flex flex-col items-center p-5 rounded-2xl bg-white/70 dark:bg-[#232425] shadow-md border border-white/30 transition-transform duration-300 ease-out active:hover:-translate-y-2 active:hover:shadow-xl active:hover:border-gray-400 lg:hover:-translate-y-2 lg:hover:shadow-xl lg:hover:border-gray-400"
             >
               {/* Skill icon */}
-              <div className="mb-4 p-3 bg-white rounded-xl shadow transition-transform duration-300 active:hover:scale-110 lg:hover:scale-110">
+              <div className="mb-4 p-3 bg-white dark:bg-[#181a1b] rounded-xl shadow transition-transform duration-300 active:hover:scale-110 lg:hover:scale-110">
                 <img
                   src={skill.img}
                   alt={`${skill.name} Icon`}
@@ -89,12 +92,12 @@ const Skills = () => {
               </div>
 
               {/* Skill name */}
-              <h3 className="text-lg font-semibold text-gray-800 mb-2 transition-colors duration-300 hover:text-gray-600">
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2 transition-colors duration-300 hover:text-gray-600 dark:hover:text-[#b2aba1]">
                 {skill.name}
               </h3>
 
               {/* Skill description */}
-              <p className="text-sm text-gray-600 text-center px-2 transition-colors duration-300 hover:text-gray-800">
+              <p className="text-sm text-gray-600 dark:text-[#b2aba1] text-center px-2 transition-colors duration-300 hover:text-gray-600 dark:hover:text-[#ccbeaa]">
                 {skill.desc}
               </p>
             </div>

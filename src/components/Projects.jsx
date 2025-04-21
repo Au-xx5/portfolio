@@ -40,18 +40,21 @@ const Projects = () => {
   ];
   return (
     <>
-      <div className="flex flex-col gap-6 min-h-screen pt-30 px-10 lg:px-8" id="projects">
+      <div
+        className="flex flex-col gap-6 min-h-screen pt-30 px-10 lg:px-8"
+        id="projects"
+      >
         <div
           className="flex flex-col items-center"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
-          <p className="text-gray-400 text-xs md:text-sm font-semibold">
+          <p className="text-gray-400 dark:text-[#b2aba1] text-xs md:text-sm font-semibold">
             Browse my recent
           </p>
-          <h1 className="text-2xl md:text-3xl font-semibold relative group inline-block mb-3">
+          <h1 className="text-2xl dark:text-white md:text-3xl font-semibold relative group inline-block mb-3">
             Projects
-            <span className="absolute left-0 -bottom-1 h-1 bg-gray-700 rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+            <span className="absolute left-0 -bottom-1 h-1 bg-gray-700 dark:bg-white rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
           </h1>
         </div>
 
@@ -63,7 +66,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col justify-center items-center p-5 bg-white/70 shadow-md rounded-2xl gap-5"
+              className="flex flex-col justify-center items-center p-5 bg-white/70 dark:bg-[#232425] shadow-md rounded-2xl gap-5"
             >
               <div className="overflow-hidden rounded-3xl">
                 <img
@@ -73,14 +76,14 @@ const Projects = () => {
                 />
               </div>
 
-              <h3 className="text-black text-xl font-semibold hover:text-gray-500">
+              <h3 className="text-black dark:text-white text-xl font-semibold hover:text-gray-600 dark:hover:text-[#b2aba1]">
                 {project.name}
               </h3>
               <div className="flex flex-wrap justify-center gap-2">
                 {project.stack.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="text-[11px] text-gray-800 bg-gray-200 px-2 py-1 rounded-full border border-gray-300 shadow-sm"
+                    className="text-[11px] text-black dark:text-gray-200 bg-gray-200 dark:bg-[#181a1b] px-2 py-1 rounded-full border border-gray-300 dark:border-[#181a1b] shadow-sm"
                   >
                     {tech}
                   </span>
@@ -92,7 +95,7 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn text-xs md:text-md text-center flex items-center justify-center gap-1 text-gray-800 border-2 rounded-3xl py-1 px-3 active:bg-black active:text-white active:scale-110 lg:hover:text-white lg:hover:bg-black lg:hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="btn text-black dark:text-gray-200 text-xs md:text-md text-center flex items-center justify-center gap-1 border-2 rounded-3xl py-1 px-3 active:bg-black active:text-white dark:active:bg-gray-200 dark:active:text-[#181a1b] lg:hover:text-white lg:hover:bg-black dark:lg:hover:text-[#181a1b] dark:lg:hover:bg-gray-200 lg:hover:scale-110 transition-transform duration-300 ease-in-out"
                 >
                   <BsGithub /> Github
                 </a>
@@ -101,7 +104,7 @@ const Projects = () => {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn text-black text-xs md:text-md text-center flex items-center justify-center gap-1 border-2 rounded-3xl py-1 px-3 active:bg-black active:text-white active:scale-110 lg:hover:text-white lg:hover:bg-black lg:hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="btn text-black dark:text-gray-200 text-xs md:text-md text-center flex items-center justify-center gap-1 border-2 rounded-3xl py-1 px-3 active:bg-black active:text-white dark:active:bg-gray-200 dark:active:text-[#181a1b] active:scale-110 lg:hover:text-white lg:hover:bg-black dark:lg:hover:text-[#181a1b] dark:lg:hover:bg-gray-200 lg:hover:scale-110 transition-transform duration-300 ease-in-out"
                 >
                   <LuSquareArrowOutUpRight />
                   Demo

@@ -13,15 +13,15 @@ export default function ContactSection() {
       <div className="pt-24 md:pt-32 px-8 min-h-screen" id="contact">
         <div className="max-w-4xl mx-auto text-white">
           <h2
-            className="text-black text-2xl md:text-3xl font-bold relative group inline-block"
+            className="text-black dark:text-white text-2xl md:text-3xl font-bold relative group inline-block"
             data-aos="fade-up"
             data-aos-duration="1500"
           >
             Get in Touch
-            <span className="absolute left-0 -bottom-1 h-1 bg-gray-700 rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+            <span className="absolute left-0 -bottom-1 h-1 bg-gray-600 dark:bg-white rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
           </h2>
           <p
-            className="mt-2 text-gray-400 text-sm md:text-[1rem]"
+            className="mt-2 text-gray-400 dark:text-[#b2aba1] text-sm md:text-[1rem]"
             data-aos="fade-up"
             data-aos-duration="1500"
           >
@@ -49,7 +49,7 @@ export default function ContactSection() {
                 href={link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 border-2 border-black text-black rounded-md active:bg-black active:text-white lg:hover:bg-black lg:hover:text-white lg:hover:scale-110 transition-transform duration-300 ease-in-out"
+                className="p-2 border-2 border-black dark:border-gray-200 text-black dark:text-gray-200 rounded-md active:bg-black active:text-white lg:hover:bg-[#232425] lg:hover:text-white lg:hover:scale-110 transition-transform duration-300 ease-in-out"
               >
                 <Icon size={20} />
               </a>
@@ -73,18 +73,20 @@ export default function ContactSection() {
             ].map(({ icon, label }, i) => (
               <div key={i} className="relative w-full h-40">
                 {/* back layer */}
-                <div className="absolute top-3 left-3 w-full h-full bg-gray-600 rounded-2xl"></div>
+                <div className="absolute top-3 left-3 w-full h-full bg-gray-300 rounded-2xl"></div>
                 {/* front layer */}
-                <div className="relative w-full h-full bg-gray-500 rounded-2xl p-6 flex items-center gap-4">
+                <div className="relative w-full h-full bg-gray-200 rounded-2xl p-6 flex items-center gap-4">
                   <div className="text-black">{icon}</div>
-                  <span className="text-white text-xs lg:text-md">{label}</span>
+                  <span className="text-black text-xs lg:text-md">
+                    {label}
+                  </span>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        
-        <div className="text-center my-14 text-gray-500 text-sm">
+
+        <div className="text-center my-14 text-gray-400 dark:text-gray-200 text-sm">
           <p>© {new Date().getFullYear()} Baruch. All rights reserved.</p>
         </div>
       </div>

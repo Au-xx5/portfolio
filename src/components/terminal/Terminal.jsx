@@ -48,19 +48,19 @@ const TerminalSection = () => {
   }, [index, isCommand, currentLine]);
 
   return (
-    <div className="bg-white text-black font-mono rounded-lg shadow-lg max-w-70 md:max-w-full mx-auto p-6">
-      <div className="bg-white text-black px-6 py-3 rounded-t-md text-xl  border-b border-gray-700">
+    <div className="bg-white dark:bg-[#181a1b] text-black font-mono rounded-lg shadow-lg max-w-70 md:max-w-full mx-auto p-6">
+      <div className="bg-white dark:bg-white/5 text-black dark:text-white px-6 py-3 rounded-t-md text-xl  border-b border-gray-700">
         Hi There
       </div>
       <div className="px-6 py-4 space-y-2 md:text-xl leading-relaxed min-h-[220px]">
         {lines.slice(0, currentLine).map((line, i) => (
           <div key={i}>
             <div className=" text-purple-400">{line.command}</div>
-            <div className="terminal-output">{highlightText(line.output)}</div>
+            <div className="terminal-output dark:text-white">{highlightText(line.output)}</div>
           </div>
         ))}
         {currentLine < lines.length && (
-          <div className="flex terminal-output">
+          <div className="flex terminal-output dark:text-white">
             <div className="text-purple-400">{isCommand ? "" : ""}</div>
             <div>
               <span>{highlightText(typedText)}</span>

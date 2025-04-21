@@ -22,12 +22,12 @@ const NavBar = () => {
   }, []);
 
   return (
-    <header
+    <div
       className={`sticky top-0 z-10 flex h-20 items-center justify-between px-6 md:px-20 transition-all duration-300 ${
-        scrolled ? "backdrop-blur-md bg-white/30 shadow-md" : "bg-transparent"
+        scrolled ? "backdrop-blur-md bg-white/5 dark:backdrop-blur-sm shadow-md" : "bg-transparent"
       }`}
     >
-      <p className="text-xl text-black logo">Baruch</p>
+      <p className="text-xl text-black dark:text-white logo">Baruch</p>
 
       {/* Hamburger icon - Mobile only */}
       <button className="md:hidden" onClick={() => setOpen(true)}>
@@ -51,7 +51,7 @@ const NavBar = () => {
           <a
             key={item}
             href={`#${item.toLowerCase()}`}
-            className="hover:text-gray-600 transition hover:scale-105"
+            className="hover:text-gray-600 dark:hover:text-[#b2aba1] dark:text-white transition hover:scale-105"
           >
             {item}
           </a>
@@ -92,7 +92,7 @@ const NavBar = () => {
                     key={item}
                     href={`#${item.toLowerCase()}`}
                     onClick={() => setOpen(false)}
-                    className="w-full text-center px-4 py-2 rounded-md transition active:bg-gray-100 active:scale-95"
+                    className="w-full text-center dark:hover:text-[#b2aba1] px-4 py-2 rounded-md transition active:bg-gray-100 active:scale-95"
                   >
                     {item}
                   </a>
@@ -102,7 +102,7 @@ const NavBar = () => {
           </TransitionChild>
         </div>
       </Dialog>
-    </header>
+    </div>
   );
 };
 

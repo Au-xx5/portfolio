@@ -26,12 +26,12 @@ const AboutMe = () => {
         >
           <div className="flex flex-col min-w-[300px] md:min-w-[600px] items-center justify-center gap-10 md:gap-5">
             <div className="flex flex-col items-center justify-center md:w-fit">
-              <p className="text-gray-400 text-xs md:text-sm font-semibold">
+              <p className="text-gray-400 dark:text-[#b2aba1] text-xs md:text-sm font-semibold">
                 Get to know more
               </p>
-              <p className="text-2xl md:text-3xl font-semibold relative group inline-block">
+              <p className="text-2xl md:text-3xl font-semibold relative group inline-block dark:text-white">
                 About Me
-                <span className="absolute left-0 -bottom-1 h-1 bg-gray-700 rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
+                <span className="absolute left-0 -bottom-1 h-1 bg-gray-700  dark:bg-white rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
               </p>
             </div>
             <TerminalSection />
