@@ -15,26 +15,29 @@ import { useEffect, useState } from "react";
 Aos.init();
 
 function App() {
-  const [isDarkMode, setDarkMode] = useState(
-    document.documentElement.classList.contains("dark")
-  );
+  const [isDarkMode, setDarkMode] = useState(() => {
+    // Initialize from localStorage
+    const currentTheme = localStorage.getItem("theme");
+    return currentTheme === "dark";
+  });
 
   useEffect(() => {
-    const currentTheme = localStorage.getItem("theme");
-
-    if (currentTheme === "dark") {
+    if (isDarkMode) {
       document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
     }
-  }, []);
+  }, [isDarkMode]);
 
   const toggleDarkMode = (e) => {
     e.preventDefault();
     const html = document.documentElement;
 
     html.classList.toggle("dark");
-    setDarkMode(document.documentElement.classList.contains("dark"));
+    const isDark = html.classList.contains("dark");
+    setDarkMode(isDark);
 
-    if (document.documentElement.classList.contains("dark")) {
+    if (isDark) {
       localStorage.setItem("theme", "dark");
     } else {
       localStorage.removeItem("theme");
