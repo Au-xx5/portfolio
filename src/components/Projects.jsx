@@ -40,7 +40,7 @@ const Projects = () => {
   ];
   return (
     <>
-      <div className="flex flex-col gap-6 min-h-screen pt-30" id="projects">
+      <div className="flex flex-col gap-6 min-h-screen pt-30 px-10 lg:px-8" id="projects">
         <div
           className="flex flex-col items-center"
           data-aos="fade-up"

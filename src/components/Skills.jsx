@@ -53,7 +53,7 @@ const Skills = () => {
   ];
   return (
     <>
-      <div className="flex flex-col gap-6 min-h-screen pt-30" id="skills">
+      <div className="flex flex-col gap-6 min-h-screen pt-30 px-10 lg:px-8" id="skills">
         <div
           className="flex flex-col items-center"
           data-aos="fade-up"
@@ -64,7 +64,7 @@ const Skills = () => {
             <span className="absolute left-0 -bottom-1 h-1 bg-gray-700 rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
           </h1>
 
-          <p className="text-gray-400 text-xs md:text-sm font-semibold">
+          <p className="text-gray-400 text-center text-xs md:text-sm font-semibold">
             Technologies I have mastered through experience
           </p>
         </div>
