@@ -16,7 +16,6 @@ Aos.init();
 
 function App() {
   const [isDarkMode, setDarkMode] = useState(() => {
-    // Initialize from localStorage
     const currentTheme = localStorage.getItem("theme");
     return currentTheme === "dark";
   });
