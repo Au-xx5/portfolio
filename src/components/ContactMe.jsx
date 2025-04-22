@@ -10,7 +10,7 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function ContactSection() {
   return (
     <>
-      <div className="pt-24 md:pt-32 px-8 min-h-screen" id="contact">
+      <div className="pt-24 md:pt-32 px-8" id="contact">
         <div className="max-w-4xl mx-auto text-white text-center lg:text-left">
           <h2
             className="text-black dark:text-white text-2xl md:text-3xl font-bold relative group inline-block"
