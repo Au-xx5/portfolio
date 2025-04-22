@@ -5,10 +5,11 @@ import {
   DialogBackdrop,
   TransitionChild,
 } from "@headlessui/react";
-// import { XMarkIcon } from "@heroicons/react/24/outline";
-import { Menu, X } from "lucide-react";
+import { IoMdClose } from "react-icons/io";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 
 const NavBar = () => {
+  const navLinks = ["About", "Skills", "Projects", "Contact"];
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
 
@@ -33,20 +34,20 @@ const NavBar = () => {
 
       {/* Desktop nav */}
       <nav className="hidden md:flex gap-8 text-lg font-medium text-black">
-        {["About", "Skills", "Projects", "Contact"].map((item) => (
+        {navLinks.map((link) => (
           <a
-            key={item}
-            href={`#${item.toLowerCase()}`}
+            key={link}
+            href={`#${link.toLowerCase()}`}
             className="hover:text-gray-600 dark:hover:text-[#b2aba1] dark:text-white transition hover:scale-105"
           >
-            {item}
+            {link}
           </a>
         ))}
       </nav>
 
       {/* Hamburger icon - Mobile only */}
       <button className="md:hidden" onClick={() => setOpen(true)}>
-        <Menu className="w-8 h-8 text-black dark:text-white" />
+        <HiOutlineMenuAlt3 className="w-8 h-8 text-black dark:text-white" />
       </button>
 
       {/* Mobile Dialog */}
@@ -63,24 +64,23 @@ const NavBar = () => {
             leaveTo="translate-x-full"
           >
             <DialogPanel className="relative w-3/4 max-w-sm h-full bg-white/50 dark:bg-[#181a1b]/50 backdrop-blur-md p-6 shadow-xl">
-              {/* Close button */}
               <button
                 onClick={() => setOpen(false)}
                 className="absolute top-4 right-4 hover:text-black"
               >
-                <X className="w-6 h-6 text-gray-500 dark:text-white"/>
+                <IoMdClose className="w-6 h-6 text-black dark:text-white" />
               </button>
 
               {/* Nav Links */}
               <nav className="mt-6 flex flex-col items-center gap-4 text-lg text-black">
-                {["About", "Skills", "Projects", "Contact"].map((item) => (
+                {navLinks.map((link) => (
                   <a
-                    key={item}
-                    href={`#${item.toLowerCase()}`}
+                    key={link}
+                    href={`#${link.toLowerCase()}`}
                     onClick={() => setOpen(false)}
                     className="w-full text-center dark:text-gray-200 dark:hover:text-gray-400 px-4 py-2 rounded-md transition active:bg-gray-100 dark:active:bg-[#232425] active:scale-95"
                   >
-                    {item}
+                    {link}
                   </a>
                 ))}
               </nav>

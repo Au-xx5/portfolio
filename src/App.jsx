@@ -6,7 +6,6 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import BackToTop from "./components/icons/BackToTop";
 import ContactMe from "./components/ContactMe";
 import Footer from "./components/Footer";
 import DarkMode from "./components/icons/DarkMode";
@@ -53,7 +52,6 @@ function App() {
         <Projects />
         <ContactMe />
         <Footer />
-        <BackToTop />
         <DarkMode toggleDarkMode={toggleDarkMode} />
       </div>
       <ParticlesComponent isDarkMode={isDarkMode} />
