@@ -44,7 +44,7 @@ function App() {
 
   return (
     <>
-      <div style={{ position: "relative", zIndex: 1 }}>
+      <div className="relative z-[1]">
         <NavBar />
         <Profile />
         <AboutMe />

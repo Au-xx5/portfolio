@@ -1,4 +1,3 @@
-import React from "react";
 import xclone from "/projectImg/xclone.png";
 import taskmanager from "/projectImg/taskmanager.png";
 import weatherapp from "/projectImg/weatherapp.png";
@@ -41,7 +40,7 @@ const Projects = () => {
   return (
     <>
       <div
-        className="flex flex-col gap-6 min-h-screen pt-30 px-10 lg:px-8"
+        className="flex flex-col gap-6 min-h-screen justify-center items-center px-10 lg:px-8"
         id="projects"
       >
         <div

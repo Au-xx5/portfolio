@@ -1,4 +1,3 @@
-import React from "react";
 import html from "/skills/html.png";
 import css from "/skills/css.png";
 import javascript from "/skills/javascript.png";
@@ -54,7 +53,7 @@ const Skills = () => {
   return (
     <>
       <div
-        className="flex flex-col gap-6 min-h-screen pt-30 px-10 lg:px-8"
+        className="flex flex-col gap-6 min-h-screen items-center justify-center px-10 lg:px-8"
         id="skills"
       >
         <div

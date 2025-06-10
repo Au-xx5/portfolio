@@ -3,6 +3,7 @@ import {
   FaLinkedinIn,
   FaGithub,
   FaEnvelope,
+  FaWhatsapp,
 } from "react-icons/fa";
 
 import { FaXTwitter } from "react-icons/fa6";
@@ -10,7 +11,10 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function ContactSection() {
   return (
     <>
-      <div className="pt-24 md:pt-32 px-8" id="contact">
+      <div
+        className="flex justify-center items-center min-h-screen px-8"
+        id="contact"
+      >
         <div className="max-w-4xl mx-auto text-white text-center lg:text-left">
           <h2
             className="text-black dark:text-white text-2xl md:text-3xl font-bold relative group inline-block"
@@ -63,12 +67,12 @@ export default function ContactSection() {
           >
             {[
               {
-                icon: <FaInstagram size={24} />,
-                label: "instagram.com/rtro.polo",
+                icon: <FaWhatsapp size={24} />,
+                label: "+234 907 111 9980",
               },
               {
                 icon: <FaEnvelope size={24} />,
-                label: "baruchefiok@gmail.com",
+                label: "capalotnaija@gmail.com",
               },
             ].map(({ icon, label }, i) => (
               <div key={i} className="relative w-full h-40">

@@ -1,10 +1,9 @@
-import React from "react";
 import TerminalSection from "./terminal/Terminal";
 const AboutMe = () => {
   return (
     <>
       <div
-        className="block min-w-[300px] min-h-screen md:w-auto md:flex bg-neutral items-center justify-around pt-24 md:pt-15"
+        className="block min-w-[300px] min-h-screen md:w-auto md:flex bg-neutral items-center justify-around"
         id="about"
       >
         <div

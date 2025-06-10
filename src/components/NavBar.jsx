@@ -24,13 +24,15 @@ const NavBar = () => {
 
   return (
     <div
-      className={`sticky top-0 z-10 flex h-20 items-center justify-between px-6 md:px-20 transition-all duration-300 ${
+      className={`sticky top-0 z-10 flex items-center justify-between px-6 py-5 md:px-20 transition-all duration-300 ${
         scrolled
           ? "backdrop-blur-md bg-white/5 dark:backdrop-blur-sm shadow-md"
           : "bg-transparent"
       }`}
     >
-      <p className="text-xl text-black dark:text-white logo">Baruch</p>
+      <a href="#" className="text-xl text-black dark:text-white logo">
+        polo.exe
+      </a>
 
       {/* Desktop nav */}
       <nav className="hidden md:flex gap-8 text-lg font-medium text-black">
