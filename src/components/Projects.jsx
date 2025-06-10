@@ -1,7 +1,7 @@
 import xclone from "/projectImg/xclone.png";
 import taskmanager from "/projectImg/taskmanager.png";
 import weatherapp from "/projectImg/weatherapp.png";
-import memorycard from "/projectImg/memorycard.png";
+import forever from "/projectImg/forever.png";
 import { BsGithub } from "react-icons/bs";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
 
@@ -10,14 +10,14 @@ const Projects = () => {
     {
       img: taskmanager,
       name: "Task Manager",
-      stack: ["Bootstrap", "React Js", "Express Js", "Mongo Db"],
+      stack: ["Bootstrap", "React Js", "Express Js", "MongoDb"],
       github: "https://github.com/poloexe/Task-Manager",
       live: "https://task-manager-vert-theta.vercel.app",
     },
     {
       img: xclone,
       name: "X Clone",
-      stack: ["Tailwind css", "Daisy UI", "React Js", "Express Js", "Mongo Db"],
+      stack: ["Tailwind css", "Daisy UI", "React Js", "Express Js", "MongoDb"],
       github: "https://github.com/poloexe/x-clone",
       live: "https://x-clone-h3o7.onrender.com",
     },
@@ -30,11 +30,11 @@ const Projects = () => {
       live: "https://weather-app-theta-one-58.vercel.app",
     },
     {
-      img: memorycard,
-      name: "Memory Card",
-      stack: ["Bootstrap", "React Js"],
-      github: "https://github.com/poloexe/memory-card",
-      live: "https://memory-card-coral-seven.vercel.app",
+      img: forever,
+      name: "Forever Shopping",
+      stack: ["Tailwind", "React Js", "Express Js", "MongoDb"],
+      github: "https://github.com/poloexe/forever-website",
+      live: "https://forever-website-chi.vercel.app",
     },
   ];
 
