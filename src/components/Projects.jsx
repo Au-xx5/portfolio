@@ -37,14 +37,15 @@ const Projects = () => {
       live: "https://memory-card-coral-seven.vercel.app",
     },
   ];
+
   return (
-    <>
+    <div className="flex min-h-screen mt-30 md:mt-0">
       <div
-        className="flex flex-col gap-6 min-h-screen justify-center items-center px-10 lg:px-8"
+        className="flex flex-col gap-6 justify-center items-center px-10 lg:px-8"
         id="projects"
       >
         <div
-          className="flex flex-col items-center"
+          className="flex flex-col"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
@@ -58,31 +59,31 @@ const Projects = () => {
         </div>
 
         <div
-          className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col justify-center items-center p-5 bg-white/70 dark:bg-[#232425] shadow-md rounded-2xl gap-5"
+              className="flex flex-col justify-center items-center p-3 md:p-5 bg-white/70 dark:bg-[#232425] shadow-md rounded-2xl gap-5"
             >
               <div className="overflow-hidden rounded-3xl">
                 <img
                   src={project.img}
                   alt={`${project.name} Icon`}
-                  className="w-40 h-30 rounded-3xl transition-transform duration-300 hover:scale-125"
+                  className="w-20 h-20 md:w-40 md:h-30 rounded-3xl transition-transform duration-300 hover:scale-125"
                 />
               </div>
 
-              <h3 className="text-black dark:text-white text-xl font-semibold hover:text-gray-600 dark:hover:text-[#b2aba1]">
+              <h3 className="text-black dark:text-white text-md md:text-xl font-semibold hover:text-gray-600 dark:hover:text-[#b2aba1]">
                 {project.name}
               </h3>
               <div className="flex flex-wrap justify-center gap-2">
                 {project.stack.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="text-[11px] text-black dark:text-gray-200 bg-gray-200 dark:bg-[#181a1b] px-2 py-1 rounded-full border border-gray-300 dark:border-[#181a1b] shadow-sm"
+                    className="text-[8px] md:text-[11px] text-black dark:text-gray-200 bg-gray-200 dark:bg-[#181a1b] px-2 py-1 rounded-full border border-gray-300 dark:border-[#181a1b] shadow-sm"
                   >
                     {tech}
                   </span>
@@ -113,7 +114,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

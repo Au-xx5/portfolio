@@ -72,31 +72,31 @@ const Skills = () => {
         </div>
 
         <div
-          className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
           data-aos="fade-up"
           data-aos-duration="1500"
         >
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col items-center p-5 rounded-2xl bg-white/70 dark:bg-[#232425] shadow-md border border-white/30 transition-transform duration-300 ease-out active:hover:-translate-y-2 active:hover:shadow-xl active:hover:border-gray-400 lg:hover:-translate-y-2 lg:hover:shadow-xl lg:hover:border-gray-400"
+              className="flex flex-col items-center p-3 md:p-5 rounded-2xl bg-white/70 dark:bg-[#232425] shadow-md border border-white/30 transition-transform duration-300 ease-out active:hover:-translate-y-2 active:hover:shadow-xl active:hover:border-gray-400 lg:hover:-translate-y-2 lg:hover:shadow-xl lg:hover:border-gray-400"
             >
               {/* Skill icon */}
               <div className="mb-4 p-3 bg-white dark:bg-[#181a1b] rounded-xl shadow transition-transform duration-300 active:hover:scale-110 lg:hover:scale-110">
                 <img
                   src={skill.img}
                   alt={`${skill.name} Icon`}
-                  className="w-14 h-14"
+                  className="w-10 h-10 md:w-14 md:h-14"
                 />
               </div>
 
               {/* Skill name */}
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-2 transition-colors duration-300 hover:text-gray-600 dark:hover:text-[#b2aba1]">
+              <h3 className="text-base md:text-lg font-semibold text-gray-800 dark:text-white mb-2 transition-colors duration-300 hover:text-gray-600 dark:hover:text-[#b2aba1]">
                 {skill.name}
               </h3>
 
               {/* Skill description */}
-              <p className="text-sm text-gray-600 dark:text-[#b2aba1] text-center px-2 transition-colors duration-300 hover:text-gray-600 dark:hover:text-[#ccbeaa]">
+              <p className="text-xs md:text-sm text-gray-600 dark:text-[#b2aba1] text-center px-2 transition-colors duration-300 hover:text-gray-600 dark:hover:text-[#ccbeaa]">
                 {skill.desc}
               </p>
             </div>

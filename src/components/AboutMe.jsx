@@ -1,9 +1,10 @@
 import TerminalSection from "./terminal/Terminal";
+
 const AboutMe = () => {
   return (
     <>
       <div
-        className="block min-w-[300px] min-h-screen md:w-auto md:flex bg-neutral items-center justify-around"
+        className="min-w-screen min-h-screen md:w-auto flex bg-neutral items-center justify-around"
         id="about"
       >
         <div

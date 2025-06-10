@@ -44,7 +44,7 @@ function App() {
 
   return (
     <>
-      <div className="relative z-[1]">
+      <div className="relative z-[1] min-h-screen">
         <NavBar />
         <Profile />
         <AboutMe />
