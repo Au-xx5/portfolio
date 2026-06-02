@@ -39,9 +39,9 @@ const Projects = () => {
   ];
 
   return (
-    <div className="flex min-h-screen mt-30 md:mt-0">
+    <div className="flex min-h-screen mt-32 md:mt-0">
       <div
-        className="flex flex-col gap-6 justify-center items-center px-10 lg:px-8"
+        className="flex flex-col gap-6 justify-center items-center px-6 md:px-10 lg:px-12"
         id="projects"
       >
         <div
@@ -72,18 +72,18 @@ const Projects = () => {
                 <img
                   src={project.img}
                   alt={`${project.name} Icon`}
-                  className="w-20 h-20 md:w-40 md:h-30 rounded-3xl transition-transform duration-300 hover:scale-125"
+                  className="w-20 h-20 md:w-40 md:h-32 object-cover rounded-3xl transition-transform duration-300 hover:scale-125"
                 />
               </div>
 
-              <h3 className="text-black dark:text-white text-md md:text-xl font-semibold hover:text-gray-600 dark:hover:text-[#b2aba1]">
+              <h3 className="text-black dark:text-white text-base md:text-xl font-semibold hover:text-gray-600 dark:hover:text-[#b2aba1]">
                 {project.name}
               </h3>
               <div className="flex flex-wrap justify-center gap-2">
                 {project.stack.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="text-[8px] md:text-[11px] text-black dark:text-gray-200 bg-gray-200 dark:bg-[#181a1b] px-2 py-1 rounded-full border border-gray-300 dark:border-[#181a1b] shadow-sm"
+                    className="text-[10px] md:text-xs text-black dark:text-gray-200 bg-gray-200 dark:bg-[#181a1b] px-2 py-1 rounded-full border border-gray-300 dark:border-[#181a1b] shadow-sm"
                   >
                     {tech}
                   </span>
@@ -95,7 +95,7 @@ const Projects = () => {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn text-black dark:text-gray-200 text-xs md:text-md text-center flex items-center justify-center gap-1 border-2 rounded-3xl py-1 px-3 active:bg-black active:text-white dark:active:bg-gray-200 dark:active:text-[#181a1b] lg:hover:text-white lg:hover:bg-black dark:lg:hover:text-[#181a1b] dark:lg:hover:bg-gray-200 lg:hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="btn text-black dark:text-gray-200 text-xs md:text-sm text-center flex items-center justify-center gap-1 border-2 rounded-3xl py-1 px-3 active:bg-black active:text-white dark:active:bg-gray-200 dark:active:text-[#181a1b] lg:hover:text-white lg:hover:bg-black dark:lg:hover:text-[#181a1b] dark:lg:hover:bg-gray-200 lg:hover:scale-110 transition-transform duration-300 ease-in-out"
                 >
                   <BsGithub /> Github
                 </a>
@@ -104,7 +104,7 @@ const Projects = () => {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn text-black dark:text-gray-200 text-xs md:text-md text-center flex items-center justify-center gap-1 border-2 rounded-3xl py-1 px-3 active:bg-black active:text-white dark:active:bg-gray-200 dark:active:text-[#181a1b] active:scale-110 lg:hover:text-white lg:hover:bg-black dark:lg:hover:text-[#181a1b] dark:lg:hover:bg-gray-200 lg:hover:scale-110 transition-transform duration-300 ease-in-out"
+                  className="btn text-black dark:text-gray-200 text-xs md:text-sm text-center flex items-center justify-center gap-1 border-2 rounded-3xl py-1 px-3 active:bg-black active:text-white dark:active:bg-gray-200 dark:active:text-[#181a1b] active:scale-110 lg:hover:text-white lg:hover:bg-black dark:lg:hover:text-[#181a1b] dark:lg:hover:bg-gray-200 lg:hover:scale-110 transition-transform duration-300 ease-in-out"
                 >
                   <LuSquareArrowOutUpRight />
                   Demo

@@ -11,13 +11,17 @@ import Footer from "./components/Footer";
 import DarkMode from "./components/icons/DarkMode";
 import { useEffect, useState } from "react";
 
-Aos.init();
-
 function App() {
   const [isDarkMode, setDarkMode] = useState(() => {
     const currentTheme = localStorage.getItem("theme");
     return currentTheme === "dark";
   });
+
+  useEffect(() => {
+    Aos.init({
+      once: true,
+    });
+  }, []);
 
   useEffect(() => {
     if (isDarkMode) {

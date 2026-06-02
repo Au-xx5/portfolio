@@ -25,7 +25,7 @@ export default function ContactSection() {
             <span className="absolute left-0 -bottom-1 h-1 bg-gray-600 dark:bg-white rounded-full w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
           </h2>
           <p
-            className="mt-2 text-gray-400 dark:text-[#b2aba1] text-sm md:text-[1rem]"
+            className="mt-2 text-gray-400 dark:text-[#b2aba1] text-sm md:text-base"
             data-aos="fade-up"
             data-aos-duration="1500"
           >
@@ -81,7 +81,7 @@ export default function ContactSection() {
                 {/* front layer */}
                 <div className="relative w-full h-full bg-gray-300 dark:bg-[#232425] rounded-2xl p-6 flex items-center gap-4">
                   <div className="text-black dark:text-white">{icon}</div>
-                  <span className="text-black  dark:text-white text-xs lg:text-md ">
+                  <span className="text-black  dark:text-white text-xs lg:text-base ">
                     {label}
                   </span>
                 </div>

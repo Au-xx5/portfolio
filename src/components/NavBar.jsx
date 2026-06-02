@@ -30,7 +30,7 @@ const NavBar = () => {
           : "bg-transparent fixed w-full"
       }`}
     >
-      <a href="#" className="text-md md:text-xl text-black dark:text-white logo">
+      <a href="#" className="text-base md:text-xl text-black dark:text-white logo">
         polo.exe
       </a>
 

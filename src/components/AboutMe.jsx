@@ -4,7 +4,7 @@ const AboutMe = () => {
   return (
     <>
       <div
-        className="min-w-screen min-h-screen md:w-auto flex bg-neutral items-center justify-around"
+        className="w-full min-h-screen md:w-auto flex bg-neutral items-center justify-around"
         id="about"
       >
         <div
@@ -15,7 +15,7 @@ const AboutMe = () => {
           <img
             src="/avatar/illustration-guy-with-laptop.jpg"
             alt="avatar"
-            className="w-48 md:h-90"
+            className="w-32 md:w-48 lg:w-64 object-contain"
           />
         </div>
 
@@ -24,7 +24,7 @@ const AboutMe = () => {
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          <div className="flex flex-col min-w-[300px] md:min-w-[600px] items-center justify-center gap-10 md:gap-5">
+          <div className="flex flex-col w-full max-w-[300px] md:max-w-[600px] px-4 md:px-0 items-center justify-center gap-10 md:gap-5">
             <div className="flex flex-col items-center justify-center md:w-fit">
               <p className="text-gray-400 dark:text-[#b2aba1] text-xs md:text-sm font-semibold">
                 Get to know more
