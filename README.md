@@ -4,7 +4,7 @@ Welcome to my personal portfolio! 🚀 This project showcases my skills, project
 
 ## Live Demo
 
-Check out the live version [here](https://baruch-zytee.vercel.app/).
+Check out the live version [here](https://baruch-portfolio.vercel.app).
 
 ---
 
