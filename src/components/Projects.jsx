@@ -1,7 +1,7 @@
 import xclone from "/projectImg/xclone.png";
 import taskmanager from "/projectImg/taskmanager.png";
 import weatherapp from "/projectImg/weatherapp.png";
-import forever from "/projectImg/forever.png";
+import ara from "/projectImg/ara.png";
 import { BsGithub } from "react-icons/bs";
 import { LuSquareArrowOutUpRight } from "react-icons/lu";
 
@@ -30,11 +30,11 @@ const Projects = () => {
       live: "https://weather-app-theta-one-58.vercel.app",
     },
     {
-      img: forever,
-      name: "Forever Shopping",
+      img: ara,
+      name: "Ara",
       stack: ["Tailwind", "React Js", "Express Js", "MongoDb"],
-      github: "https://github.com/poloexe/forever-website",
-      live: "https://forever-website-chi.vercel.app",
+      github: "https://github.com/poloexe/Ara",
+      live: "https://ara-m3qm.vercel.app/",
     },
   ];
 

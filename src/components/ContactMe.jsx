@@ -12,10 +12,10 @@ export default function ContactSection() {
   return (
     <>
       <div
-        className="flex justify-center items-center min-h-screen px-8"
+        className="flex justify-center items-center min-h-screen px-6 md:px-10 lg:px-12 w-full"
         id="contact"
       >
-        <div className="max-w-4xl mx-auto text-white text-center lg:text-left">
+        <div className="w-full max-w-5xl lg:max-w-6xl mx-auto text-center lg:text-left">
           <h2
             className="text-black dark:text-white text-2xl md:text-3xl font-bold relative group inline-block"
             data-aos="fade-up"
@@ -45,7 +45,7 @@ export default function ContactSection() {
                 Icon: FaLinkedinIn,
                 link: "https://linkedin.com/in/poloexe",
               },
-              { Icon: FaInstagram, link: "https://instagram.com/rtro.polo" },
+              { Icon: FaInstagram, link: "https://instagram.com/polo.tix" },
               { Icon: FaXTwitter, link: "https://twitter.com/capalot_tecs" },
             ].map(({ Icon, link }, i) => (
               <a
