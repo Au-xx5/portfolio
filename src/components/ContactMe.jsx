@@ -75,13 +75,13 @@ export default function ContactSection() {
                 label: "capalotnaija@gmail.com",
               },
             ].map(({ icon, label }, i) => (
-              <div key={i} className="relative w-full h-40">
+              <div key={i} className="relative w-full h-24 md:h-32 lg:h-40">
                 {/* back layer */}
                 <div className="absolute top-3 left-3 w-full h-full bg-gray-400 dark:bg-[#4c4d4f] rounded-2xl"></div>
                 {/* front layer */}
-                <div className="relative w-full h-full bg-gray-300 dark:bg-[#232425] rounded-2xl p-6 flex items-center gap-4">
+                <div className="relative w-full h-full bg-gray-300 dark:bg-[#232425] rounded-2xl p-4 lg:p-6 flex items-center gap-3 lg:gap-4">
                   <div className="text-black dark:text-white">{icon}</div>
-                  <span className="text-black  dark:text-white text-xs lg:text-base ">
+                  <span className="text-black dark:text-white text-sm md:text-base font-medium">
                     {label}
                   </span>
                 </div>

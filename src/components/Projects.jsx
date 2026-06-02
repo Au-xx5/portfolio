@@ -66,13 +66,13 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col justify-center items-center p-3 md:p-5 bg-white/70 dark:bg-[#232425] shadow-md rounded-2xl gap-5"
+              className="flex flex-col justify-center items-center p-4 md:p-5 bg-white/70 dark:bg-[#232425] shadow-md rounded-2xl gap-5 w-full"
             >
-              <div className="overflow-hidden rounded-3xl">
+              <div className="w-full overflow-hidden rounded-xl md:rounded-3xl">
                 <img
                   src={project.img}
                   alt={`${project.name} Icon`}
-                  className="w-20 h-20 md:w-40 md:h-32 object-cover rounded-3xl transition-transform duration-300 hover:scale-125"
+                  className="w-full h-32 md:h-40 object-cover transition-transform duration-300 hover:scale-110 md:hover:scale-125"
                 />
               </div>
 
