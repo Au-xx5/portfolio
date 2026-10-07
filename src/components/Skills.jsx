@@ -6,6 +6,7 @@ import bootstrap from "/skills/bootstrap.png";
 import react from "/skills/react.png";
 import nodejs from "/skills/nodejs.png";
 import expressjs from "/skills/expressjs.png";
+import cplusplus from "/skills/c++.png"
 
 const Skills = () => {
   const skills = [
@@ -24,31 +25,23 @@ const Skills = () => {
       name: "Tailwind CSS",
       desc: "A utility-first CSS framework for rapid UI development",
     },
-    {
-      img: bootstrap,
-      name: "Bootstrap",
-      desc: "A popular CSS framework for responsive web design",
-    },
+    
     {
       img: javascript,
       name: "JavaScript",
       desc: "The programming language of the web",
     },
     {
+      img: cplusplus,
+      name: "C++",
+      desc: " high-performance, general-purpose programming language",
+    },
+    {
       img: react,
       name: "React",
       desc: "A JavaScript library for building user interfaces",
     },
-    {
-      img: nodejs,
-      name: "Node JS",
-      desc: "JavaScript runtime built on Chrome's V8 engine",
-    },
-    {
-      img: expressjs,
-      name: "Express JS",
-      desc: "A web application framework for Node.js",
-    },
+    
   ];
   return (
     <>

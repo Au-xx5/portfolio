@@ -7,7 +7,7 @@ const lines = [
   },
   {
     command: "~ echo $PREVIOUSLY",
-    output: "Student at TECHSTUDIO ACADEMY",
+    output: "Student at Flip to tech",
   },
   {
     command: "~ echo $HOBBIES",
@@ -79,16 +79,16 @@ function highlightText(text) {
     const punct = word.match(/[.,]$/);
     const end = punct ? punct[0] : "";
 
-    if (clean === "TECHSTUDIO")
+    if (clean === "FLIP TO")
       return (
         <span key={i} className="text-green-400">
-          TECHSTUDIO{end + " "}
+          FLIP TO{end + " "}
         </span>
       );
-    if (clean === "ACADEMY")
+    if (clean === "TECH")
       return (
         <span key={i} className="text-yellow-400">
-          ACADEMY{end + " "}
+          TECH{end + " "}
         </span>
       );
     if (clean === "Tech")

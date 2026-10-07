@@ -31,7 +31,7 @@ const NavBar = () => {
       }`}
     >
       <a href="#" className="text-base md:text-xl text-black dark:text-white logo">
-        polo.exe
+        Au-xx5
       </a>
 
       {/* Desktop nav */}

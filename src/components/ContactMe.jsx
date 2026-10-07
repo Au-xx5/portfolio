@@ -40,13 +40,8 @@ export default function ContactSection() {
             data-aos-duration="1500"
           >
             {[
-              { Icon: FaGithub, link: "https://github.com/poloexe" },
-              {
-                Icon: FaLinkedinIn,
-                link: "https://linkedin.com/in/poloexe",
-              },
-              { Icon: FaInstagram, link: "https://instagram.com/polo.tix" },
-              { Icon: FaXTwitter, link: "https://twitter.com/capalot_tecs" },
+              { Icon: FaGithub, link: "https://github.com/Au-xx5" },
+            
             ].map(({ Icon, link }, i) => (
               <a
                 key={i}
@@ -68,11 +63,11 @@ export default function ContactSection() {
             {[
               {
                 icon: <FaWhatsapp size={24} />,
-                label: "+234 907 111 9980",
+                label: "+234 808 381 8389",
               },
               {
                 icon: <FaEnvelope size={24} />,
-                label: "capalotnaija@gmail.com",
+                label: "olufalaiyedavid@gmail.com",
               },
             ].map(({ icon, label }, i) => (
               <div key={i} className="relative w-full h-24 md:h-32 lg:h-40">

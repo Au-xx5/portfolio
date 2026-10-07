@@ -14,13 +14,13 @@ const Projects = () => {
       github: "https://github.com/poloexe/Task-Manager",
       live: "https://task-manager-vert-theta.vercel.app",
     },
-    {
-      img: xclone,
-      name: "X Clone",
-      stack: ["Tailwind css", "Daisy UI", "React Js", "Express Js", "MongoDb"],
-      github: "https://github.com/poloexe/x-clone",
-      live: "https://x-clone-h3o7.onrender.com",
-    },
+    // {
+    //   img: xclone,
+    //   name: "X Clone",
+    //   stack: ["Tailwind css", "Daisy UI", "React Js", "Express Js", "MongoDb"],
+    //   github: "https://github.com/poloexe/x-clone",
+    //   live: "https://x-clone-h3o7.onrender.com",
+    // },
 
     {
       img: weatherapp,
@@ -29,13 +29,13 @@ const Projects = () => {
       github: "https://github.com/poloexe/weather-app",
       live: "https://weather-app-theta-one-58.vercel.app",
     },
-    {
-      img: ara,
-      name: "Ara",
-      stack: ["Tailwind", "React Js", "Express Js", "MongoDb"],
-      github: "https://github.com/poloexe/Ara",
-      live: "https://ara-m3qm.vercel.app/",
-    },
+    // {
+    //   img: ara,
+    //   name: "Ara",
+    //   stack: ["Tailwind", "React Js", "Express Js", "MongoDb"],
+    //   github: "https://github.com/poloexe/Ara",
+    //   live: "https://ara-m3qm.vercel.app/",
+    // },
   ];
 
   return (
